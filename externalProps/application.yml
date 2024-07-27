@@ -1,0 +1,35 @@
+default:
+  nome: Fernando Campos
+server:
+  port: 8086
+
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: jobbatch
+  batch:
+    jdbc:
+      initialize-schema: always
+  datasource:
+    url: jdbc:mariadb://172.16.0.3:3308/jobbatch
+    #url: jdbc:mariadb://127.0.0.1:3308/erpnecropolis
+    password: q1w2e3r4t5
+    username: root
+    driver-class-name: org.mariadb.jdbc.Driver
+    hikari:
+      maximum-pool-size: 15
+      minimum-idle: 5
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      pool-name: NecropolisHikariCP
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    database-platform: org.mariadb.jdbc.Driver
+    show-sql: true

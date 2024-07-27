@@ -1,11 +1,7 @@
-package br.com.fcpaiva.com.br.springbatch.parImparJob;
+package br.com.fcpaiva.com.br.springbatch.app.step;
 
-import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
-import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.function.FunctionItemProcessor;
 import org.springframework.batch.item.support.IteratorItemReader;
@@ -17,24 +13,12 @@ import java.util.Arrays;
 import java.util.List;
 
 @Configuration
-@EnableBatchProcessing
-public class ParImparBatch {
-
-    @Autowired
-    private JobBuilderFactory jobBuilderFactory;
+public class ParImparStepConfig {
 
     @Autowired
     private StepBuilderFactory stepBuilderFactory;
 
     @Bean
-    public Job parImparJob() {
-      return   jobBuilderFactory
-              .get("parImparJob")
-              .start(parImparStep())
-              .incrementer(new RunIdIncrementer())
-              .build();
-    }
-
     public Step parImparStep() {
         return stepBuilderFactory
                 .get("imprimeParImparStep")
