@@ -567,3 +567,47 @@
 2024-07-27 15:27:57,640 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{nome=Fernando, run.id=19, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt, arquivoClientesDelimitado=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoDelimitadoJob/files/clientes.txt}] and the following status: [COMPLETED] in 27ms
 2024-07-27 15:27:57,645 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2024-07-27 15:27:57,651 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-27 15:37:31,607 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 48452 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 15:37:31,608 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 15:37:31,848 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 15:37:31,958 INFO o.f.c.i.l.VersionPrinter [main] Flyway Community Edition 8.5.13 by Redgate
+2024-07-27 15:37:31,958 INFO o.f.c.i.l.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-07-27 15:37:31,959 INFO o.f.c.i.l.VersionPrinter [main] 
+2024-07-27 15:37:31,962 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-27 15:37:32,008 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-27 15:37:32,013 INFO o.f.c.i.d.b.BaseDatabaseType [main] Database: jdbc:mariadb://172.16.0.3:3308/jobbatch (MariaDB 11.4)
+2024-07-27 15:37:32,022 WARN o.f.c.i.d.b.Database [main] Flyway upgrade recommended: MariaDB 11.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 10.6.
+2024-07-27 15:37:32,029 INFO o.f.c.i.c.DbValidate [main] Successfully validated 0 migrations (execution time 00:00.004s)
+2024-07-27 15:37:32,029 WARN o.f.c.i.c.DbValidate [main] No migrations found. Are your locations set up correctly?
+2024-07-27 15:37:32,035 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `jobbatch`: << Empty Schema >>
+2024-07-27 15:37:32,035 INFO o.f.c.i.c.DbMigrate [main] Schema `jobbatch` is up to date. No migration necessary.
+2024-07-27 15:37:32,050 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_INSTANCE' already exists
+2024-07-27 15:37:32,051 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION' already exists
+2024-07-27 15:37:32,052 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_PARAMS' already exists
+2024-07-27 15:37:32,052 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION' already exists
+2024-07-27 15:37:32,052 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_CONTEXT' already exists
+2024-07-27 15:37:32,053 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_CONTEXT' already exists
+2024-07-27 15:37:32,053 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_SEQ' already exists
+2024-07-27 15:37:32,054 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_SEQ' already exists
+2024-07-27 15:37:32,055 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_SEQ' already exists
+2024-07-27 15:37:32,144 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-07-27 15:37:32,209 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-07-27 15:37:32,243 INFO b.c.f.c.b.s.SpringBatchApplication [main] Started SpringBatchApplication in 0.84 seconds (JVM running for 1.274)
+2024-07-27 15:37:32,294 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=leituraArquivoDelimitado]] launched with the following parameters: [{nome=Fernando, run.id=2, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt, arquivoClientesDelimitado=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoDelimitadoJob/files/clientes.txt}]
+2024-07-27 15:37:32,316 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [leituraArquivoDelimitadoStep]
+2024-07-27 15:37:32,378 INFO o.s.b.c.s.AbstractStep [main] Step: [leituraArquivoDelimitadoStep] executed in 62ms
+2024-07-27 15:37:32,385 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=leituraArquivoDelimitado]] completed with the following parameters: [{nome=Fernando, run.id=2, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt, arquivoClientesDelimitado=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoDelimitadoJob/files/clientes.txt}] and the following status: [COMPLETED] in 80ms
+2024-07-27 15:37:32,402 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=arquivoLarguraFixaJob]] launched with the following parameters: [{nome=Fernando, run.id=3, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt, arquivoClientesDelimitado=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoDelimitadoJob/files/clientes.txt}]
+2024-07-27 15:37:32,413 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [leituraArquivoLarguraFixaStep]
+2024-07-27 15:37:32,433 INFO o.s.b.c.s.AbstractStep [main] Step: [leituraArquivoLarguraFixaStep] executed in 20ms
+2024-07-27 15:37:32,439 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=arquivoLarguraFixaJob]] completed with the following parameters: [{nome=Fernando, run.id=3, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt, arquivoClientesDelimitado=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoDelimitadoJob/files/clientes.txt}] and the following status: [COMPLETED] in 35ms
+2024-07-27 15:37:32,456 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] launched with the following parameters: [{nome=Fernando, run.id=19, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt, arquivoClientesDelimitado=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoDelimitadoJob/files/clientes.txt}]
+2024-07-27 15:37:32,481 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2024-07-27 15:37:32,493 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 12ms
+2024-07-27 15:37:32,499 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] completed with the following parameters: [{nome=Fernando, run.id=19, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt, arquivoClientesDelimitado=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoDelimitadoJob/files/clientes.txt}] and the following status: [COMPLETED] in 40ms
+2024-07-27 15:37:32,517 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{nome=Fernando, run.id=20, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt, arquivoClientesDelimitado=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoDelimitadoJob/files/clientes.txt}]
+2024-07-27 15:37:32,529 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2024-07-27 15:37:32,541 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeOlaStep] executed in 12ms
+2024-07-27 15:37:32,549 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{nome=Fernando, run.id=20, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt, arquivoClientesDelimitado=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoDelimitadoJob/files/clientes.txt}] and the following status: [COMPLETED] in 28ms
+2024-07-27 15:37:32,552 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-27 15:37:32,557 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

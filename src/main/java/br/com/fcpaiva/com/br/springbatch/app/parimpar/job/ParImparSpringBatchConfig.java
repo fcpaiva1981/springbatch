@@ -1,4 +1,4 @@
-package br.com.fcpaiva.com.br.springbatch.app.job;
+package br.com.fcpaiva.com.br.springbatch.app.parimpar.job;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -11,17 +11,18 @@ import org.springframework.context.annotation.Configuration;
 
 @EnableBatchProcessing
 @Configuration
-public class PrimeiroJobSpringBatchConfig {
+public class ParImparSpringBatchConfig {
 
     @Autowired
     private JobBuilderFactory jobBuilderFactory;
 
     @Bean
-    public Job primeiroImprimeOlaJobParametrizado(Step imprimeOlaStep) {
-        return jobBuilderFactory
-                .get("imprimeOlaJob")
-                .start(imprimeOlaStep)
+    public Job parImparJob(Step parImparStep) {
+        return   jobBuilderFactory
+                .get("parImparJob")
+                .start(parImparStep)
                 .incrementer(new RunIdIncrementer())
                 .build();
     }
+
 }

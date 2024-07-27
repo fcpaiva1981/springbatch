@@ -1,16 +1,15 @@
-package br.com.fcpaiva.com.br.springbatch.app.step.writer;
+package br.com.fcpaiva.com.br.springbatch.app.largurafixa.writer;
 
 import br.com.fcpaiva.com.br.springbatch.entity.Cliente;
-import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class LeituraArquivoDelimitadoItemWriterConfig {
+public class LeituraArquivoLarguraFixaWriterConfig {
 
     @Bean
-    public ItemWriter<Cliente>  leituraArquivoDelimitadoItemWriter(){
+    public ItemWriter<Cliente> leituraArquivoLarguraFixaItemWriter() {
         return items -> items.forEach(System.out::println);
     }
 }

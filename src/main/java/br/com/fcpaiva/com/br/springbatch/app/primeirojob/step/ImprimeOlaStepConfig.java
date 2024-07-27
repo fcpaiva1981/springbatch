@@ -1,4 +1,4 @@
-package br.com.fcpaiva.com.br.springbatch.app.step;
+package br.com.fcpaiva.com.br.springbatch.app.primeirojob.step;
 
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;

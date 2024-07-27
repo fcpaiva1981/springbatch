@@ -1,4 +1,4 @@
-package br.com.fcpaiva.com.br.springbatch.app.job;
+package br.com.fcpaiva.com.br.springbatch.app.largurafixa.job;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -11,18 +11,16 @@ import org.springframework.context.annotation.Configuration;
 
 @EnableBatchProcessing
 @Configuration
-public class ParImparSpringBatchConfig {
-
+public class ArquivoLarguraFixaJobConfig {
     @Autowired
     private JobBuilderFactory jobBuilderFactory;
 
     @Bean
-    public Job parImparJob(Step parImparStep) {
-        return   jobBuilderFactory
-                .get("parImparJob")
-                .start(parImparStep)
+    public Job arquivoLarguraFixaJob(Step leituraArquivoLarguraFixaStep) {
+        return jobBuilderFactory
+                .get("arquivoLarguraFixaJob")
+                .start(leituraArquivoLarguraFixaStep)
                 .incrementer(new RunIdIncrementer())
                 .build();
     }
-
 }

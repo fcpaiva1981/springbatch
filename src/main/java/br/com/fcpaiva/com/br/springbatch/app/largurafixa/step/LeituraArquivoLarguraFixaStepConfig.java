@@ -1,4 +1,4 @@
-package br.com.fcpaiva.com.br.springbatch.app.step;
+package br.com.fcpaiva.com.br.springbatch.app.largurafixa.step;
 
 import br.com.fcpaiva.com.br.springbatch.entity.Cliente;
 import org.springframework.batch.core.Step;

@@ -1,4 +1,4 @@
-package br.com.fcpaiva.com.br.springbatch.app.job;
+package br.com.fcpaiva.com.br.springbatch.app.delimitado.job;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -9,17 +9,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@EnableBatchProcessing
 @Configuration
-public class ArquivoLarguraFixaJobConfig {
+@EnableBatchProcessing
+public class ArquivoDelimitadoJobConfig {
+
     @Autowired
     private JobBuilderFactory jobBuilderFactory;
 
     @Bean
-    public Job arquivoLarguraFixaJob(Step leituraArquivoLarguraFixaStep) {
+    public Job leituraArquivoDelimitado(Step leituraArquivoDelimitadoStep) {
         return jobBuilderFactory
-                .get("arquivoLarguraFixaJob")
-                .start(leituraArquivoLarguraFixaStep)
+                .get("leituraArquivoDelimitado")
+                .start(leituraArquivoDelimitadoStep)
                 .incrementer(new RunIdIncrementer())
                 .build();
     }

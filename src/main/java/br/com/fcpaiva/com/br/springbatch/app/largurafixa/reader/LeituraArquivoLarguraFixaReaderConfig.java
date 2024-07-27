@@ -1,4 +1,4 @@
-package br.com.fcpaiva.com.br.springbatch.app.step.reader;
+package br.com.fcpaiva.com.br.springbatch.app.largurafixa.reader;
 
 import br.com.fcpaiva.com.br.springbatch.entity.Cliente;
 import org.springframework.batch.core.configuration.annotation.StepScope;
