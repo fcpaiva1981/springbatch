@@ -1,0 +1,380 @@
+2024-07-27 13:43:30,878 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 45561 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 13:43:30,879 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 13:43:31,094 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 13:43:31,213 INFO o.f.c.i.l.VersionPrinter [main] Flyway Community Edition 8.5.13 by Redgate
+2024-07-27 13:43:31,213 INFO o.f.c.i.l.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-07-27 13:43:31,213 INFO o.f.c.i.l.VersionPrinter [main] 
+2024-07-27 13:43:31,216 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-27 13:43:31,262 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-27 13:43:31,267 INFO o.f.c.i.d.b.BaseDatabaseType [main] Database: jdbc:mariadb://172.16.0.3:3308/jobbatch (MariaDB 11.4)
+2024-07-27 13:43:31,279 WARN o.f.c.i.d.b.Database [main] Flyway upgrade recommended: MariaDB 11.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 10.6.
+2024-07-27 13:43:31,288 INFO o.f.c.i.c.DbValidate [main] Successfully validated 0 migrations (execution time 00:00.005s)
+2024-07-27 13:43:31,288 WARN o.f.c.i.c.DbValidate [main] No migrations found. Are your locations set up correctly?
+2024-07-27 13:43:31,294 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `jobbatch`: << Empty Schema >>
+2024-07-27 13:43:31,295 INFO o.f.c.i.c.DbMigrate [main] Schema `jobbatch` is up to date. No migration necessary.
+2024-07-27 13:43:31,317 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_INSTANCE' already exists
+2024-07-27 13:43:31,318 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION' already exists
+2024-07-27 13:43:31,319 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_PARAMS' already exists
+2024-07-27 13:43:31,319 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION' already exists
+2024-07-27 13:43:31,319 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_CONTEXT' already exists
+2024-07-27 13:43:31,320 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_CONTEXT' already exists
+2024-07-27 13:43:31,320 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_SEQ' already exists
+2024-07-27 13:43:31,321 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_SEQ' already exists
+2024-07-27 13:43:31,322 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_SEQ' already exists
+2024-07-27 13:43:31,386 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-07-27 13:43:31,454 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-07-27 13:43:31,489 INFO b.c.f.c.b.s.SpringBatchApplication [main] Started SpringBatchApplication in 0.834 seconds (JVM running for 1.429)
+2024-07-27 13:43:31,533 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] launched with the following parameters: [{run.id=8, nome=Fernando}]
+2024-07-27 13:43:31,556 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2024-07-27 13:43:31,575 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 19ms
+2024-07-27 13:43:31,585 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] completed with the following parameters: [{run.id=8, nome=Fernando}] and the following status: [COMPLETED] in 39ms
+2024-07-27 13:43:31,604 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{run.id=9, nome=Fernando}]
+2024-07-27 13:43:31,617 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2024-07-27 13:43:31,643 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeOlaStep] executed in 26ms
+2024-07-27 13:43:31,651 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{run.id=9, nome=Fernando}] and the following status: [COMPLETED] in 43ms
+2024-07-27 13:43:31,654 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-27 13:43:31,659 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-27 13:59:43,301 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46165 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 13:59:43,303 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 13:59:43,508 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 13:59:43,617 INFO o.f.c.i.l.VersionPrinter [main] Flyway Community Edition 8.5.13 by Redgate
+2024-07-27 13:59:43,617 INFO o.f.c.i.l.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-07-27 13:59:43,618 INFO o.f.c.i.l.VersionPrinter [main] 
+2024-07-27 13:59:43,620 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-27 13:59:43,668 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-27 13:59:43,673 INFO o.f.c.i.d.b.BaseDatabaseType [main] Database: jdbc:mariadb://172.16.0.3:3308/jobbatch (MariaDB 11.4)
+2024-07-27 13:59:43,682 WARN o.f.c.i.d.b.Database [main] Flyway upgrade recommended: MariaDB 11.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 10.6.
+2024-07-27 13:59:43,689 INFO o.f.c.i.c.DbValidate [main] Successfully validated 0 migrations (execution time 00:00.004s)
+2024-07-27 13:59:43,690 WARN o.f.c.i.c.DbValidate [main] No migrations found. Are your locations set up correctly?
+2024-07-27 13:59:43,695 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `jobbatch`: << Empty Schema >>
+2024-07-27 13:59:43,696 INFO o.f.c.i.c.DbMigrate [main] Schema `jobbatch` is up to date. No migration necessary.
+2024-07-27 13:59:43,710 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_INSTANCE' already exists
+2024-07-27 13:59:43,711 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION' already exists
+2024-07-27 13:59:43,712 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_PARAMS' already exists
+2024-07-27 13:59:43,712 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION' already exists
+2024-07-27 13:59:43,713 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_CONTEXT' already exists
+2024-07-27 13:59:43,713 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_CONTEXT' already exists
+2024-07-27 13:59:43,714 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_SEQ' already exists
+2024-07-27 13:59:43,715 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_SEQ' already exists
+2024-07-27 13:59:43,715 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_SEQ' already exists
+2024-07-27 13:59:43,790 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-07-27 13:59:43,860 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-07-27 13:59:43,899 INFO b.c.f.c.b.s.SpringBatchApplication [main] Started SpringBatchApplication in 0.792 seconds (JVM running for 1.273)
+2024-07-27 13:59:43,958 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] launched with the following parameters: [{run.id=9, nome=Fernando, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 13:59:43,980 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2024-07-27 13:59:43,998 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 18ms
+2024-07-27 13:59:44,008 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] completed with the following parameters: [{run.id=9, nome=Fernando, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 38ms
+2024-07-27 13:59:44,027 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{run.id=10, nome=Fernando, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 13:59:44,039 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2024-07-27 13:59:44,063 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeOlaStep] executed in 24ms
+2024-07-27 13:59:44,070 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{run.id=10, nome=Fernando, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 40ms
+2024-07-27 13:59:44,072 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-27 13:59:44,076 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-27 14:00:19,612 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46204 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:00:19,614 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:00:19,870 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 14:00:19,993 INFO o.f.c.i.l.VersionPrinter [main] Flyway Community Edition 8.5.13 by Redgate
+2024-07-27 14:00:19,993 INFO o.f.c.i.l.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-07-27 14:00:19,993 INFO o.f.c.i.l.VersionPrinter [main] 
+2024-07-27 14:00:19,996 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-27 14:00:20,045 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-27 14:00:20,053 INFO o.f.c.i.d.b.BaseDatabaseType [main] Database: jdbc:mariadb://172.16.0.3:3308/jobbatch (MariaDB 11.4)
+2024-07-27 14:00:20,065 WARN o.f.c.i.d.b.Database [main] Flyway upgrade recommended: MariaDB 11.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 10.6.
+2024-07-27 14:00:20,074 INFO o.f.c.i.c.DbValidate [main] Successfully validated 0 migrations (execution time 00:00.004s)
+2024-07-27 14:00:20,074 WARN o.f.c.i.c.DbValidate [main] No migrations found. Are your locations set up correctly?
+2024-07-27 14:00:20,086 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `jobbatch`: << Empty Schema >>
+2024-07-27 14:00:20,088 INFO o.f.c.i.c.DbMigrate [main] Schema `jobbatch` is up to date. No migration necessary.
+2024-07-27 14:00:20,115 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_INSTANCE' already exists
+2024-07-27 14:00:20,125 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION' already exists
+2024-07-27 14:00:20,125 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_PARAMS' already exists
+2024-07-27 14:00:20,126 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION' already exists
+2024-07-27 14:00:20,126 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_CONTEXT' already exists
+2024-07-27 14:00:20,127 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_CONTEXT' already exists
+2024-07-27 14:00:20,127 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_SEQ' already exists
+2024-07-27 14:00:20,128 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_SEQ' already exists
+2024-07-27 14:00:20,129 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_SEQ' already exists
+2024-07-27 14:00:20,209 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-07-27 14:00:20,282 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-07-27 14:00:20,333 INFO b.c.f.c.b.s.SpringBatchApplication [main] Started SpringBatchApplication in 0.949 seconds (JVM running for 1.542)
+2024-07-27 14:00:20,389 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] launched with the following parameters: [{nome=Fernando, run.id=10, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:00:20,409 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2024-07-27 14:00:20,426 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 16ms
+2024-07-27 14:00:20,433 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] completed with the following parameters: [{nome=Fernando, run.id=10, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 32ms
+2024-07-27 14:00:20,450 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{nome=Fernando, run.id=11, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:00:20,462 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2024-07-27 14:00:20,490 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeOlaStep] executed in 28ms
+2024-07-27 14:00:20,498 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{nome=Fernando, run.id=11, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 44ms
+2024-07-27 14:00:20,500 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-27 14:00:20,506 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-27 14:01:35,935 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46307 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:01:35,938 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:01:36,185 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 14:01:36,304 INFO o.f.c.i.l.VersionPrinter [main] Flyway Community Edition 8.5.13 by Redgate
+2024-07-27 14:01:36,304 INFO o.f.c.i.l.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-07-27 14:01:36,304 INFO o.f.c.i.l.VersionPrinter [main] 
+2024-07-27 14:01:36,308 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-27 14:01:36,357 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-27 14:01:36,363 INFO o.f.c.i.d.b.BaseDatabaseType [main] Database: jdbc:mariadb://172.16.0.3:3308/jobbatch (MariaDB 11.4)
+2024-07-27 14:01:36,373 WARN o.f.c.i.d.b.Database [main] Flyway upgrade recommended: MariaDB 11.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 10.6.
+2024-07-27 14:01:36,381 INFO o.f.c.i.c.DbValidate [main] Successfully validated 0 migrations (execution time 00:00.004s)
+2024-07-27 14:01:36,381 WARN o.f.c.i.c.DbValidate [main] No migrations found. Are your locations set up correctly?
+2024-07-27 14:01:36,386 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `jobbatch`: << Empty Schema >>
+2024-07-27 14:01:36,387 INFO o.f.c.i.c.DbMigrate [main] Schema `jobbatch` is up to date. No migration necessary.
+2024-07-27 14:01:36,404 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_INSTANCE' already exists
+2024-07-27 14:01:36,405 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION' already exists
+2024-07-27 14:01:36,405 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_PARAMS' already exists
+2024-07-27 14:01:36,406 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION' already exists
+2024-07-27 14:01:36,406 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_CONTEXT' already exists
+2024-07-27 14:01:36,407 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_CONTEXT' already exists
+2024-07-27 14:01:36,407 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_SEQ' already exists
+2024-07-27 14:01:36,408 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_SEQ' already exists
+2024-07-27 14:01:36,408 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_SEQ' already exists
+2024-07-27 14:01:36,484 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-07-27 14:01:36,551 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-07-27 14:01:36,591 INFO b.c.f.c.b.s.SpringBatchApplication [main] Started SpringBatchApplication in 1.032 seconds (JVM running for 1.648)
+2024-07-27 14:01:36,641 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] launched with the following parameters: [{nome=Fernando, run.id=11, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:01:36,663 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2024-07-27 14:01:36,683 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 18ms
+2024-07-27 14:01:36,691 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] completed with the following parameters: [{nome=Fernando, run.id=11, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 38ms
+2024-07-27 14:01:36,708 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{nome=Fernando, run.id=12, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:01:36,718 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2024-07-27 14:01:36,863 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeOlaStep] executed in 145ms
+2024-07-27 14:01:36,874 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{nome=Fernando, run.id=12, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 162ms
+2024-07-27 14:01:36,881 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-27 14:01:36,888 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-27 14:01:54,247 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46316 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:01:54,248 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:01:54,461 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 14:01:54,571 INFO o.f.c.i.l.VersionPrinter [main] Flyway Community Edition 8.5.13 by Redgate
+2024-07-27 14:01:54,572 INFO o.f.c.i.l.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-07-27 14:01:54,572 INFO o.f.c.i.l.VersionPrinter [main] 
+2024-07-27 14:01:54,575 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-27 14:01:54,625 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-27 14:01:54,629 INFO o.f.c.i.d.b.BaseDatabaseType [main] Database: jdbc:mariadb://172.16.0.3:3308/jobbatch (MariaDB 11.4)
+2024-07-27 14:01:54,640 WARN o.f.c.i.d.b.Database [main] Flyway upgrade recommended: MariaDB 11.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 10.6.
+2024-07-27 14:01:54,647 INFO o.f.c.i.c.DbValidate [main] Successfully validated 0 migrations (execution time 00:00.004s)
+2024-07-27 14:01:54,647 WARN o.f.c.i.c.DbValidate [main] No migrations found. Are your locations set up correctly?
+2024-07-27 14:01:54,653 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `jobbatch`: << Empty Schema >>
+2024-07-27 14:01:54,654 INFO o.f.c.i.c.DbMigrate [main] Schema `jobbatch` is up to date. No migration necessary.
+2024-07-27 14:01:54,669 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_INSTANCE' already exists
+2024-07-27 14:01:54,670 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION' already exists
+2024-07-27 14:01:54,671 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_PARAMS' already exists
+2024-07-27 14:01:54,671 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION' already exists
+2024-07-27 14:01:54,672 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_CONTEXT' already exists
+2024-07-27 14:01:54,672 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_CONTEXT' already exists
+2024-07-27 14:01:54,672 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_SEQ' already exists
+2024-07-27 14:01:54,673 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_SEQ' already exists
+2024-07-27 14:01:54,674 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_SEQ' already exists
+2024-07-27 14:01:54,747 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-07-27 14:01:54,809 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-07-27 14:01:54,845 INFO b.c.f.c.b.s.SpringBatchApplication [main] Started SpringBatchApplication in 0.835 seconds (JVM running for 1.369)
+2024-07-27 14:01:54,887 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] launched with the following parameters: [{nome=Fernando, run.id=12, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:01:54,908 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2024-07-27 14:01:54,927 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 19ms
+2024-07-27 14:01:54,935 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] completed with the following parameters: [{nome=Fernando, run.id=12, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 37ms
+2024-07-27 14:01:54,953 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{nome=Fernando, run.id=13, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:01:54,964 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2024-07-27 14:01:54,994 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeOlaStep] executed in 30ms
+2024-07-27 14:01:55,005 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{nome=Fernando, run.id=13, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 48ms
+2024-07-27 14:01:55,008 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-27 14:01:55,013 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-27 14:03:39,745 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46385 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:03:39,747 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:03:39,990 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 14:03:40,103 INFO o.f.c.i.l.VersionPrinter [main] Flyway Community Edition 8.5.13 by Redgate
+2024-07-27 14:03:40,103 INFO o.f.c.i.l.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-07-27 14:03:40,103 INFO o.f.c.i.l.VersionPrinter [main] 
+2024-07-27 14:03:40,107 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-27 14:03:40,152 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-27 14:03:40,157 INFO o.f.c.i.d.b.BaseDatabaseType [main] Database: jdbc:mariadb://172.16.0.3:3308/jobbatch (MariaDB 11.4)
+2024-07-27 14:03:40,169 WARN o.f.c.i.d.b.Database [main] Flyway upgrade recommended: MariaDB 11.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 10.6.
+2024-07-27 14:03:40,178 INFO o.f.c.i.c.DbValidate [main] Successfully validated 0 migrations (execution time 00:00.004s)
+2024-07-27 14:03:40,178 WARN o.f.c.i.c.DbValidate [main] No migrations found. Are your locations set up correctly?
+2024-07-27 14:03:40,183 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `jobbatch`: << Empty Schema >>
+2024-07-27 14:03:40,184 INFO o.f.c.i.c.DbMigrate [main] Schema `jobbatch` is up to date. No migration necessary.
+2024-07-27 14:03:40,201 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_INSTANCE' already exists
+2024-07-27 14:03:40,201 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION' already exists
+2024-07-27 14:03:40,202 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_PARAMS' already exists
+2024-07-27 14:03:40,202 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION' already exists
+2024-07-27 14:03:40,203 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_CONTEXT' already exists
+2024-07-27 14:03:40,203 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_CONTEXT' already exists
+2024-07-27 14:03:40,204 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_SEQ' already exists
+2024-07-27 14:03:40,204 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_SEQ' already exists
+2024-07-27 14:03:40,205 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_SEQ' already exists
+2024-07-27 14:03:40,280 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-07-27 14:03:40,344 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-07-27 14:03:40,383 INFO b.c.f.c.b.s.SpringBatchApplication [main] Started SpringBatchApplication in 0.849 seconds (JVM running for 1.398)
+2024-07-27 14:03:40,434 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] launched with the following parameters: [{nome=Fernando,, run.id=13, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:03:40,456 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2024-07-27 14:03:40,473 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 17ms
+2024-07-27 14:03:40,481 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] completed with the following parameters: [{nome=Fernando,, run.id=13, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 35ms
+2024-07-27 14:03:40,500 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{nome=Fernando,, run.id=14, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:03:40,513 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2024-07-27 14:03:40,537 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeOlaStep] executed in 24ms
+2024-07-27 14:03:40,543 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{nome=Fernando,, run.id=14, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 41ms
+2024-07-27 14:03:40,546 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-27 14:03:40,551 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-27 14:05:52,661 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46463 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:05:52,662 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:05:52,859 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 14:05:52,939 WARN o.s.c.a.AnnotationConfigApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'leituraArquivoLarguraFixaReaderConfig': Unsatisfied dependency expressed through field 'arquivoClientes'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'jobParameters' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+2024-07-27 14:06:34,787 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46492 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:06:34,788 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:06:35,023 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 14:06:35,143 INFO o.f.c.i.l.VersionPrinter [main] Flyway Community Edition 8.5.13 by Redgate
+2024-07-27 14:06:35,143 INFO o.f.c.i.l.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-07-27 14:06:35,143 INFO o.f.c.i.l.VersionPrinter [main] 
+2024-07-27 14:06:35,146 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-27 14:06:35,195 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-27 14:06:35,201 INFO o.f.c.i.d.b.BaseDatabaseType [main] Database: jdbc:mariadb://172.16.0.3:3308/jobbatch (MariaDB 11.4)
+2024-07-27 14:06:35,213 WARN o.f.c.i.d.b.Database [main] Flyway upgrade recommended: MariaDB 11.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 10.6.
+2024-07-27 14:06:35,220 INFO o.f.c.i.c.DbValidate [main] Successfully validated 0 migrations (execution time 00:00.004s)
+2024-07-27 14:06:35,220 WARN o.f.c.i.c.DbValidate [main] No migrations found. Are your locations set up correctly?
+2024-07-27 14:06:35,225 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `jobbatch`: << Empty Schema >>
+2024-07-27 14:06:35,226 INFO o.f.c.i.c.DbMigrate [main] Schema `jobbatch` is up to date. No migration necessary.
+2024-07-27 14:06:35,245 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_INSTANCE' already exists
+2024-07-27 14:06:35,246 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION' already exists
+2024-07-27 14:06:35,246 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_PARAMS' already exists
+2024-07-27 14:06:35,247 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION' already exists
+2024-07-27 14:06:35,247 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_CONTEXT' already exists
+2024-07-27 14:06:35,247 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_CONTEXT' already exists
+2024-07-27 14:06:35,248 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_SEQ' already exists
+2024-07-27 14:06:35,249 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_SEQ' already exists
+2024-07-27 14:06:35,249 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_SEQ' already exists
+2024-07-27 14:06:35,322 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-07-27 14:06:35,389 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-07-27 14:06:35,429 INFO b.c.f.c.b.s.SpringBatchApplication [main] Started SpringBatchApplication in 0.858 seconds (JVM running for 1.377)
+2024-07-27 14:06:35,479 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] launched with the following parameters: [{nome=Fernando, run.id=14, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:06:35,502 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2024-07-27 14:06:35,521 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 18ms
+2024-07-27 14:06:35,529 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] completed with the following parameters: [{nome=Fernando, run.id=14, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 36ms
+2024-07-27 14:06:35,548 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{nome=Fernando, run.id=15, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:06:35,559 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2024-07-27 14:06:35,587 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeOlaStep] executed in 27ms
+2024-07-27 14:06:35,595 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{nome=Fernando, run.id=15, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 41ms
+2024-07-27 14:06:35,598 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-27 14:06:35,603 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-27 14:08:27,614 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46548 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:08:27,615 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:08:27,822 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 14:08:27,925 INFO o.f.c.i.l.VersionPrinter [main] Flyway Community Edition 8.5.13 by Redgate
+2024-07-27 14:08:27,925 INFO o.f.c.i.l.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-07-27 14:08:27,925 INFO o.f.c.i.l.VersionPrinter [main] 
+2024-07-27 14:08:27,928 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-27 14:08:27,972 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-27 14:08:27,977 INFO o.f.c.i.d.b.BaseDatabaseType [main] Database: jdbc:mariadb://172.16.0.3:3308/jobbatch (MariaDB 11.4)
+2024-07-27 14:08:27,989 WARN o.f.c.i.d.b.Database [main] Flyway upgrade recommended: MariaDB 11.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 10.6.
+2024-07-27 14:08:28,001 INFO o.f.c.i.c.DbValidate [main] Successfully validated 0 migrations (execution time 00:00.008s)
+2024-07-27 14:08:28,002 WARN o.f.c.i.c.DbValidate [main] No migrations found. Are your locations set up correctly?
+2024-07-27 14:08:28,013 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `jobbatch`: << Empty Schema >>
+2024-07-27 14:08:28,014 INFO o.f.c.i.c.DbMigrate [main] Schema `jobbatch` is up to date. No migration necessary.
+2024-07-27 14:08:28,034 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_INSTANCE' already exists
+2024-07-27 14:08:28,035 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION' already exists
+2024-07-27 14:08:28,036 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_PARAMS' already exists
+2024-07-27 14:08:28,037 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION' already exists
+2024-07-27 14:08:28,037 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_CONTEXT' already exists
+2024-07-27 14:08:28,038 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_CONTEXT' already exists
+2024-07-27 14:08:28,039 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_SEQ' already exists
+2024-07-27 14:08:28,041 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_SEQ' already exists
+2024-07-27 14:08:28,043 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_SEQ' already exists
+2024-07-27 14:08:28,117 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-07-27 14:08:28,177 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-07-27 14:08:28,228 INFO b.c.f.c.b.s.SpringBatchApplication [main] Started SpringBatchApplication in 0.839 seconds (JVM running for 1.248)
+2024-07-27 14:08:28,296 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] launched with the following parameters: [{nome=Fernando, run.id=15, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:08:28,329 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2024-07-27 14:08:28,349 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 20ms
+2024-07-27 14:08:28,387 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] completed with the following parameters: [{nome=Fernando, run.id=15, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 49ms
+2024-07-27 14:08:28,417 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{nome=Fernando, run.id=16, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:08:28,429 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2024-07-27 14:08:28,454 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeOlaStep] executed in 25ms
+2024-07-27 14:08:28,461 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{nome=Fernando, run.id=16, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 41ms
+2024-07-27 14:08:28,463 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-27 14:08:28,470 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-27 14:08:38,742 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46567 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:08:38,743 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:08:39,006 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 14:08:39,106 INFO o.f.c.i.l.VersionPrinter [main] Flyway Community Edition 8.5.13 by Redgate
+2024-07-27 14:08:39,106 INFO o.f.c.i.l.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-07-27 14:08:39,106 INFO o.f.c.i.l.VersionPrinter [main] 
+2024-07-27 14:08:39,108 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-27 14:08:39,156 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-27 14:08:39,161 INFO o.f.c.i.d.b.BaseDatabaseType [main] Database: jdbc:mariadb://172.16.0.3:3308/jobbatch (MariaDB 11.4)
+2024-07-27 14:08:39,174 WARN o.f.c.i.d.b.Database [main] Flyway upgrade recommended: MariaDB 11.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 10.6.
+2024-07-27 14:08:39,187 INFO o.f.c.i.c.DbValidate [main] Successfully validated 0 migrations (execution time 00:00.008s)
+2024-07-27 14:08:39,187 WARN o.f.c.i.c.DbValidate [main] No migrations found. Are your locations set up correctly?
+2024-07-27 14:08:39,199 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `jobbatch`: << Empty Schema >>
+2024-07-27 14:08:39,201 INFO o.f.c.i.c.DbMigrate [main] Schema `jobbatch` is up to date. No migration necessary.
+2024-07-27 14:08:39,218 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_INSTANCE' already exists
+2024-07-27 14:08:39,220 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION' already exists
+2024-07-27 14:08:39,221 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_PARAMS' already exists
+2024-07-27 14:08:39,221 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION' already exists
+2024-07-27 14:08:39,222 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_CONTEXT' already exists
+2024-07-27 14:08:39,223 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_CONTEXT' already exists
+2024-07-27 14:08:39,224 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_SEQ' already exists
+2024-07-27 14:08:39,225 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_SEQ' already exists
+2024-07-27 14:08:39,227 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_SEQ' already exists
+2024-07-27 14:08:39,295 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-07-27 14:08:39,356 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-07-27 14:08:39,393 INFO b.c.f.c.b.s.SpringBatchApplication [main] Started SpringBatchApplication in 0.842 seconds (JVM running for 1.392)
+2024-07-27 14:08:39,446 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] launched with the following parameters: [{nome=Fernando, run.id=16, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:08:39,467 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2024-07-27 14:08:39,484 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 17ms
+2024-07-27 14:08:39,492 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] completed with the following parameters: [{nome=Fernando, run.id=16, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 35ms
+2024-07-27 14:08:39,511 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{nome=Fernando, run.id=17, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:08:39,524 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2024-07-27 14:08:39,548 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeOlaStep] executed in 24ms
+2024-07-27 14:08:39,558 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{nome=Fernando, run.id=17, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 43ms
+2024-07-27 14:08:39,560 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-27 14:08:39,565 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-27 14:12:24,664 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46653 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:12:24,665 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:12:24,798 WARN o.s.c.a.AnnotationConfigApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'leituraArquivoLarguraFixaStep' defined in class path resource [br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=leituraArquivoLarguraFixaStep; factoryMethodName=leituraArquivoLarguraFixaStep; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]] for bean 'leituraArquivoLarguraFixaStep': There is already [Generic bean: class [br.com.fcpaiva.com.br.springbatch.app.step.LeituraArquivoLarguraFixaStep]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/fernandocampos/Estudos/SpringBatch/target/classes/br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]] bound.
+2024-07-27 14:14:44,929 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46725 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:14:44,931 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:14:45,054 WARN o.s.c.a.AnnotationConfigApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'leituraArquivoLarguraFixaStep' defined in class path resource [br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=leituraArquivoLarguraFixaStep; factoryMethodName=leituraArquivoLarguraFixaStep; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]] for bean 'leituraArquivoLarguraFixaStep': There is already [Generic bean: class [br.com.fcpaiva.com.br.springbatch.app.step.LeituraArquivoLarguraFixaStep]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/fernandocampos/Estudos/SpringBatch/target/classes/br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]] bound.
+2024-07-27 14:16:56,294 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46777 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:16:56,295 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:16:56,417 WARN o.s.c.a.AnnotationConfigApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'leituraArquivoLarguraFixaStep' defined in class path resource [br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=leituraArquivoLarguraFixaStep; factoryMethodName=leituraArquivoLarguraFixaStep; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]] for bean 'leituraArquivoLarguraFixaStep': There is already [Generic bean: class [br.com.fcpaiva.com.br.springbatch.app.step.LeituraArquivoLarguraFixaStep]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/fernandocampos/Estudos/SpringBatch/target/classes/br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]] bound.
+2024-07-27 14:17:48,334 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46799 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:17:48,335 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:17:48,463 WARN o.s.c.a.AnnotationConfigApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'leituraArquivoLarguraFixaStep' defined in class path resource [br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=leituraArquivoLarguraFixaStep; factoryMethodName=leituraArquivoLarguraFixaStep; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]] for bean 'leituraArquivoLarguraFixaStep': There is already [Generic bean: class [br.com.fcpaiva.com.br.springbatch.app.step.LeituraArquivoLarguraFixaStep]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/fernandocampos/Estudos/SpringBatch/target/classes/br/com/fcpaiva/com/br/springbatch/app/step/LeituraArquivoLarguraFixaStep.class]] bound.
+2024-07-27 14:18:27,942 INFO b.c.f.c.b.s.SpringBatchApplication [main] Starting SpringBatchApplication using Java 17.0.11 on Fernandos-MacBook-Air.local with PID 46825 (/Users/fernandocampos/Estudos/SpringBatch/target/classes started by fernandocampos in /Users/fernandocampos/Estudos/SpringBatch)
+2024-07-27 14:18:27,944 INFO b.c.f.c.b.s.SpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-27 14:18:28,166 INFO o.s.c.a.ConfigurationClassEnhancer [main] @Bean method PropsConfig.config is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-07-27 14:18:28,272 INFO o.f.c.i.l.VersionPrinter [main] Flyway Community Edition 8.5.13 by Redgate
+2024-07-27 14:18:28,272 INFO o.f.c.i.l.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2024-07-27 14:18:28,272 INFO o.f.c.i.l.VersionPrinter [main] 
+2024-07-27 14:18:28,275 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-07-27 14:18:28,327 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-07-27 14:18:28,333 INFO o.f.c.i.d.b.BaseDatabaseType [main] Database: jdbc:mariadb://172.16.0.3:3308/jobbatch (MariaDB 11.4)
+2024-07-27 14:18:28,348 WARN o.f.c.i.d.b.Database [main] Flyway upgrade recommended: MariaDB 11.4 is newer than this version of Flyway and support has not been tested. The latest supported version of MariaDB is 10.6.
+2024-07-27 14:18:28,356 INFO o.f.c.i.c.DbValidate [main] Successfully validated 0 migrations (execution time 00:00.004s)
+2024-07-27 14:18:28,357 WARN o.f.c.i.c.DbValidate [main] No migrations found. Are your locations set up correctly?
+2024-07-27 14:18:28,362 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `jobbatch`: << Empty Schema >>
+2024-07-27 14:18:28,363 INFO o.f.c.i.c.DbMigrate [main] Schema `jobbatch` is up to date. No migration necessary.
+2024-07-27 14:18:28,379 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_INSTANCE' already exists
+2024-07-27 14:18:28,380 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION' already exists
+2024-07-27 14:18:28,381 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_PARAMS' already exists
+2024-07-27 14:18:28,381 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION' already exists
+2024-07-27 14:18:28,382 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_CONTEXT' already exists
+2024-07-27 14:18:28,382 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_CONTEXT' already exists
+2024-07-27 14:18:28,382 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_STEP_EXECUTION_SEQ' already exists
+2024-07-27 14:18:28,383 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_EXECUTION_SEQ' already exists
+2024-07-27 14:18:28,384 WARN o.m.j.m.s.ErrorPacket [main] Error: 1050-42S01: Table 'BATCH_JOB_SEQ' already exists
+2024-07-27 14:18:28,458 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2024-07-27 14:18:28,522 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2024-07-27 14:18:28,555 INFO b.c.f.c.b.s.SpringBatchApplication [main] Started SpringBatchApplication in 0.83 seconds (JVM running for 1.327)
+2024-07-27 14:18:28,586 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=arquivoLarguraFixaJob]] launched with the following parameters: [{run.id=1, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt, nome=Fernando}]
+2024-07-27 14:18:28,609 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [leituraArquivoLarguraFixaStep]
+2024-07-27 14:18:28,661 INFO o.s.b.c.s.AbstractStep [main] Step: [leituraArquivoLarguraFixaStep] executed in 52ms
+2024-07-27 14:18:28,671 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=arquivoLarguraFixaJob]] completed with the following parameters: [{run.id=1, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt, nome=Fernando}] and the following status: [COMPLETED] in 73ms
+2024-07-27 14:18:28,702 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] launched with the following parameters: [{nome=Fernando, run.id=17, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:18:28,714 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeParImparStep]
+2024-07-27 14:18:28,726 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeParImparStep] executed in 12ms
+2024-07-27 14:18:28,733 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=parImparJob]] completed with the following parameters: [{nome=Fernando, run.id=17, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 28ms
+2024-07-27 14:18:28,750 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] launched with the following parameters: [{nome=Fernando, run.id=18, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}]
+2024-07-27 14:18:28,761 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [imprimeOlaStep]
+2024-07-27 14:18:28,783 INFO o.s.b.c.s.AbstractStep [main] Step: [imprimeOlaStep] executed in 22ms
+2024-07-27 14:18:28,790 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=imprimeOlaJob]] completed with the following parameters: [{nome=Fernando, run.id=18, arquivoClientes=file:/Users/fernandocampos/Estudos/SpringBatch/source-base/ArquivoLarguraFixaJob/files/clientes.txt}] and the following status: [COMPLETED] in 38ms
+2024-07-27 14:18:28,793 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-27 14:18:28,799 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
